@@ -1,0 +1,60 @@
+{
+    "matches": [
+        {
+            "id": 1,
+            "scoreOne": 2,
+            "scoreTwo": 3,
+            "teamOne": "FCA",
+            "teamTwo": "RMD"
+        },
+        {
+            "id": 2,
+            "scoreOne": 5,
+            "scoreTwo": 1,
+            "teamOne": "FCB",
+            "teamTwo": "RMO"
+        },
+        {
+            "id": 3,
+            "scoreOne": 3,
+            "scoreTwo": 2,
+            "teamOne": "FCA",
+            "teamTwo": "RMD"
+        },
+        {
+            "id": 4,
+            "scoreOne": 0,
+            "scoreTwo": 0,
+            "teamOne": "FCA",
+            "teamTwo": "RMO"
+        }
+    ],
+    "players": [
+        {"id": 1,"name": "Messi","nbr": 10,"position": "ATK"
+        },
+        {"id": 2,"name": "Neymar","nbr": 4,"position": "ATK"
+        },
+        {"id": 3,"name": "Ronaldo","nbr": 7,"position": "ATK"
+        },
+        {"id": 4,"name": "Xavi","nbr": 8,"position": "ATK"
+        },
+        {"id": 5,"name": "Swarez","nbr": 2,"position": "ATK"
+        }
+    ],
+    "teams": [
+        {"id": 1,"name": "FCA","pts": 20
+        },
+        {"id": 2,"name": "RMD","pts": 23
+        },
+        {"id": 3,"name": "CSS","pts": 22
+        },
+        {"id": 4,"name": "USM","pts": 27
+        },
+        {"id": 5,"name": "EST","pts": 25
+        }
+    ],
+    "users": [
+        {"id": 1,"firstname": "Rania","lastname": "Kacem","email": "rania@gmail.com","pwd": 123
+        }
+    ]
+}

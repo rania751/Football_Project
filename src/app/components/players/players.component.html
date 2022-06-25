@@ -1,0 +1,9 @@
+<app-banner title="Players"></app-banner>
+  <div class="latest-news">
+    <div class="container">      
+      <div class="row no-gutters">
+<div *ngFor="let p of players"  class="col-md-4">
+    <div>
+    <app-player [Y]="p"></app-player>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<app-banner [title]="title"></app-banner>
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <!-- // #loginform:identifant au formulaire -->
+          <form #playerForm="ngForm" (ngSubmit)="addOrEditPlayer()">
+            <div class="form-group">
+              <!-- ngModel:affecter un nom a l'input  -->
+              <!-- name :obligatoire -->
+              <!-- email et pwd teb3in ojet user bech yetsabou fl user 3an tari9 ngModel wa9tella neqliqui 3al boutton bech tsir execution ll fnct login -->
+              <input type="text" class="form-control" placeholder="Name" [(ngModel)]="player.name" name="a">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Number"  [(ngModel)]="player.nbr" name="b">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Position" [(ngModel)]="player.position" name="c">
+              </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" [value]="title">
+            </div>
+          </form>  
+        </div>
+      </div>
+    </div>
+  </div>

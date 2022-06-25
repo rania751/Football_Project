@@ -1,0 +1,147 @@
+<app-banner title="SignUP"></app-banner>
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <!-- effectuer un identifiat au formulaire -->
+        <form [formGroup]="signupForm">
+          <div class="form-group">
+            <!-- formControlName="FirstName": ta3ti esm lell input -->
+            <input
+              type="text"
+              class="form-control"
+              placeholder="FirstName"
+              formControlName="firstName"
+              required
+            />
+          </div>
+          <!-- invalid:prop html traja3 input cv walle selon validator fl ts -->
+          <!-- pour detecter q il existe une erreure detecter quil existe un prob-->
+          <div
+            *ngIf="
+              signupForm.controls['firstName'].invalid &&
+              (signupForm.controls['firstName'].dirty ||
+                signupForm.controls['firstName'].touched)
+            "
+          >
+            <!-- pour detecter le type de l'erreur bl .errors ml validator mtaa ts-->
+            <div
+              *ngIf="signupForm.controls['firstName'].errors?.['required']"
+              style="color: red"
+            >
+              First Name is required
+            </div>
+            <div
+              *ngIf="signupForm.controls['firstName'].errors?.['minlength']"
+              style="color: red"
+            >
+              First Name must have at least 5 caracters
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="LastName"
+              formControlName="lastName"
+              required
+            />
+            <div
+              *ngIf="
+                signupForm.controls['lastName'].invalid &&
+                (signupForm.controls['lastName'].dirty ||
+                  signupForm.controls['lastName'].touched)
+              "
+            >
+              <!-- pour detecter le type de l'erreur bl .errors ml validator mtaa ts-->
+              <div
+                *ngIf="signupForm.controls['lastName'].errors?.['required']"
+                style="color: red"
+              >
+                Last Name is required
+              </div>
+              <div
+                *ngIf="signupForm.controls['lastName'].errors?.['minlength']"
+                style="color: red"
+              >
+                Last Name must have at least 4 caracters
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+              required
+            />
+          </div>
+          <div
+            *ngIf="
+              signupForm.controls['email'].invalid &&
+              (signupForm.controls['email'].dirty ||
+                signupForm.controls['email'].touched)
+            "
+          >
+            <!-- pour detecter le type de l'erreur bl .errors ml validator mtaa ts-->
+            <div
+              *ngIf="signupForm.controls['email'].errors?.['required']"
+              style="color: red"
+            >
+              Email is required
+            </div>
+            <div
+              *ngIf="signupForm.controls['email'].errors?.['email']"
+              style="color: red"
+            >
+              Format Email is invalid
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="password"
+              formControlName="pwd"
+              [pattern]="passwordptn"
+              required
+            />
+          </div>
+
+          <div
+            *ngIf="
+              signupForm.controls['pwd'].invalid &&
+              (signupForm.controls['pwd'].dirty ||
+                signupForm.controls['pwd'].touched)
+            "
+          >
+            <!-- pour detecter le type de l'erreur bl .errors ml validator mtaa ts-->
+            <div
+              *ngIf="signupForm.controls['pwd'].errors?.['required']"
+              style="color: red"
+            >
+              Password is required
+            </div>
+            <div
+              *ngIf="signupForm.controls['pwd'].errors?.['pattern']"
+              style="color: red"
+            >
+              Format Password is invalid
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="submit"
+              class="btn btn-primary py-3 px-5"
+              [disabled]="signupForm.invalid"
+              (click)="signup()"
+              value="SignUp"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

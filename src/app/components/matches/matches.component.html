@@ -1,0 +1,6 @@
+<app-banner title="Matches"></app-banner>
+<div *ngFor="let m of matches">
+    <div style="margin-bottom: 150px;"> </div>
+    <!-- :les deux crochets[] :pour passer une var de la partie ts a partie html -->
+    <app-score [X]="m" ></app-score>
+</div>

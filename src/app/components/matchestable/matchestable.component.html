@@ -1,0 +1,23 @@
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>ScoreOne</th>
+        <th>ScoreTwo</th>
+        <th>TeamOne</th>
+        <th>TeamTwo</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let p of matches">
+        <td>{{p.id}}</td>
+        <td>{{p.scoreOne}}</td>
+        <td>{{p.scoreTwo}}</td>
+        <td>{{p.teamOne | asterix}}</td>
+        <td>{{p.teamTwo  | asterix}}</td>
+        <!-- event binding  nesta3mlouch routerlink 5ater ta3tini haja statique nesta3mlha fl html -->
+        <button class="btn btn-info" (click)="goTDisplay(p.id)">Display</button>
+        <button class="btn btn-warning" (click)="goTEdit(p.id)">Edit</button>
+        <button class="btn btn-danger" >Delete</button>
+
+    </tr>
+
+</table>
